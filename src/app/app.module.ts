@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { SchoolsService } from './services/aws.school.service';
 import { DatabaseServiceBase } from './services/aws.database.base';
 
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

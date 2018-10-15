@@ -8,7 +8,7 @@
 
 
 <ion-list>
-  <ion-item *ngFor="let sc of schools">
+  <ion-item *ngFor="let sc of allSchools$ | async">
       
       <h2>{{sc}}</h2>
       

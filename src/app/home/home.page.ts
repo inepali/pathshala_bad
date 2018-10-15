@@ -1,5 +1,7 @@
+import { DatabaseServiceBase } from '../services/aws.database.base';
 import { Component } from '@angular/core';
-import { SchoolsService } from '../services/aws.school.service';
+//import { SchoolsService } from '../services/aws.school.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +9,24 @@ import { SchoolsService } from '../services/aws.school.service';
 })
 export class HomePage {
 
-  public schools: any;
+  public allSchools: any;
     
-  constructor(private service :SchoolsService){
-   this.schools  = service.getAll().subscribe(data => {
-     console.log(data);
-   });
+  constructor( private service : DatabaseServiceBase){
+   
+    this.getAllSchools();
+   
+   
   }
   
+
+  getAllSchools() : any {
+    var params = {
+      TableName: "schools"
+    };
+
+    this.service.db.scan(params, (error, result) => {
+      console.log(result);
+      return result;
+    });
+  }
 }
