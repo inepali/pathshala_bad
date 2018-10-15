@@ -1,0 +1,7 @@
+{
+  "name": "pathshala",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
