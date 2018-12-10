@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiHost: 'https://pathshalawebapp.azurewebsites.net/api/'
 };

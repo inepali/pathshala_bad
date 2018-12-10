@@ -7,7 +7,9 @@
     "types": [
       "jasmine",
       "node"
-    ]
+    ],
+    "target": "es5",
+    "sourceMap": true
   },
   "files": [
     "test.ts"
