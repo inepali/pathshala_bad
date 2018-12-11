@@ -6,14 +6,30 @@
 
 <ion-content padding>
 
+<h2>Login to Pathshala</h2>
+  <ion-list>
 
-<ion-list>
-  <ion-item *ngFor="let sc of schools">
-      
-      <h2>{{sc.Name}}</h2>
-      
-  </ion-item>
-</ion-list>
+    <ion-item>
+      <ion-label floating>Email Address></ion-label>
+      <ion-input type="text" [(ng-model)]="email"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" [(ng-model)]="username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button>Login</button>
+    </ion-item>
+  
+  </ion-list>
+
+  <button ion-button>Login with Facebook</button>
+  <button ion-button color="danger">Login with Goolge</button>
+
+  No account yet? Create an account
+
 
 
 

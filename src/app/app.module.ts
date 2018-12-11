@@ -11,22 +11,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SchoolService } from './services/school.service';
 import { LoginService } from './services/login.service';
-
-import { ENV } from './../environments/environment';
 import { FirebaseAuthentication } from '@ionic-native/firebase-authentication';
-
-
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FirebaseAuthentication],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     SchoolService,
-    LoginService
+    LoginService, 
+    FirebaseAuthentication
   ],
   bootstrap: [AppComponent]
 })

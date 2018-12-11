@@ -20,6 +20,11 @@ export class HomePage {
    
    
   }
+
+
+  ngOnInit(){
+    
+  }
   
 
   getAllSchools() : any {
